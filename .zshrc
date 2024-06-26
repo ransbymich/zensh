@@ -34,25 +34,26 @@ zinit light Aloxaf/fzf-tab
 # Add in snippets
 zinit snippet OMZP::git
 zinit snippet OMZP::sudo
-zinit snippet OMZP::archlinux
-zinit snippet OMZP::aws
-zinit snippet OMZP::kubectl
-zinit snippet OMZP::kubectx
+#zinit snippet OMZP::archlinux
+#zinit snippet OMZP::aws
+#zinit snippet OMZP::kubectl
+#zinit snippet OMZP::kubectx
 zinit snippet OMZP::command-not-found
 
 # Load completions
 autoload -Uz compinit && compinit
 
+# Replay all cached completions
 zinit cdreplay -q
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Keybindings
-bindkey -e
-bindkey '^p' history-search-backward
-bindkey '^n' history-search-forward
-bindkey '^[w' kill-region
+#bindkey -e # 'e'macs mode
+#bindkey '^p' history-search-backward
+#bindkey '^n' history-search-forward
+#bindkey '^[w' kill-region
 
 # History
 HISTSIZE=5000
